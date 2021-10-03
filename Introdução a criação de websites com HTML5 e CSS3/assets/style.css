@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(194, 189, 189);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 900px;
+    margin: auto;
+
+}
+
+#titulo, .subtitulo, .subtitulopost {
+    color: rgb(15, 15, 31);
+}
+
+#titulo {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: line-through;
+    color: #505050;
+}
+
+.image {
+    border: 1px solid rgb(15, 15, 31);
+    border-radius: 30%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.subtitulopost {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.conteudopost {
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.post {
+    background-color: aliceblue;
+    padding: 15px;
+    border: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #505050;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.imagempost {
+    margin-bottom: 15px;
+    width: 100%;
+
+}
+
+img {
+    border-radius: 5px;
+}
