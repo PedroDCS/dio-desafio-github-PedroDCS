@@ -1,5 +1,6 @@
 const assert = require('assert');
 const expect = require('chai').expect
+const sinon = require('sinon');
 const Math = require('../math.js');
 let value = 0;
 describe('classe matematica', function () {
@@ -22,7 +23,7 @@ describe('classe matematica', function () {
 
     //it.skip('Multiplica', function () {
     //it.only('Multiplica', function () {
-    it.only('Multiplica', function () {
+    it('Multiplica', function () {
         const math = new Math();
         const obj = {
             name: "Pedro Daniel"
@@ -37,7 +38,19 @@ describe('classe matematica', function () {
         expect(obj).to.deep.equal(obj2)
         expect(math.multiply(value, 5)).to.equal(0)
         //assert.equal(math.multiply(value, 5), 0)
-
-
     });
+    it.only('calls res with sum and index values', function () {
+        const req = {};
+        const res = {
+            load: function load() {
+                console.log("chamado");
+            }
+        };
+        //sinon.spy(res, 'load')
+        sinon.stub(res, 'load').returns('xpto')
+        const math = new Math();
+        math.printSum(req, res, 5, 5)
+        expect(res.load.args[0][1]).to.equal(10)
+
+    })
 })
