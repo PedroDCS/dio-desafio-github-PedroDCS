@@ -1,5 +1,5 @@
 class Math {
-    sum = function sum(a, b) {
+    sum(a, b) {
         return a + b
     }
 }
